@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F0ACEAB9-3057-4443-AD06-EB5284BAEA7F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PL</RootNamespace>
+    <AssemblyName>Currency Converter</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\WPF\CurrencyConverter\התקנה\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>PL.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9BBB8061A2798FBFEC227342D3D679165B042C7C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PL_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>appIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.0.362, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.0\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="Syncfusion.Chart.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfChart.Wpf, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.WPF, Version=16.1460.0.24, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Commands\SaveCommand.cs" />
+    <Compile Include="Commands\PrintCommand.cs" />
+    <Compile Include="Commands\SwitchCurrencyCommand.cs" />
+    <Compile Include="Commands\SwitchUCommand.cs" />
+    <Compile Include="ConverterParameter.cs" />
+    <Compile Include="Converters\ContentConverter.cs" />
+    <Compile Include="Converters\ConvertValuse.cs" />
+    <Compile Include="Converters\CountryCodeToImgSourceConverter.cs" />
+    <Compile Include="Converters\boolToVisibility.cs" />
+    <Compile Include="Converters\DirectionToBackgroundConverter.cs" />
+    <Compile Include="Converters\FlagConverter.cs" />
+    <Compile Include="Converters\HorizontalAlignmentConverter.cs" />
+    <Compile Include="Converters\IssuedCountryCodeToCountrySymbolConverter.cs" />
+    <Compile Include="Converters\LabelConverter.cs" />
+    <Compile Include="Converters\MinMaxConverter.cs" />
+    <Compile Include="Converters\MultiConverter.cs" />
+    <Compile Include="CurrancyItem.xaml.cs">
+      <DependentUpon>CurrancyItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CurrenciesRTModel.cs" />
+    <Compile Include="Models\HIstoryModel.cs" />
+    <Compile Include="UserControls\RTChartUC.xaml.cs">
+      <DependentUpon>RTChartUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CurrenciesListUC.xaml.cs">
+      <DependentUpon>CurrenciesListUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HistoryUC.xaml.cs">
+      <DependentUpon>HistoryUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchUC.xaml.cs">
+      <DependentUpon>SearchUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CurrenciesListVM.cs" />
+    <Compile Include="ViewModels\HistoryVM.cs" />
+    <Compile Include="ViewModels\ICurrenciesListVM.cs" />
+    <Compile Include="ViewModels\IHistoryVM.cs" />
+    <Compile Include="ViewModels\ISwitchUC.cs" />
+    <Compile Include="ViewModels\MainVM.cs" />
+    <Compile Include="ViewModels\NotifyTaskCompletion.cs" />
+    <Compile Include="ViewModels\RTChartVM.cs" />
+    <Compile Include="ViewModels\SearchVM.cs" />
+    <Page Include="CurrancyItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ResorceDictionary\HistoryChartDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResorceDictionary\DictionaryCurrency.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResorceDictionary\RTChartDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\RTChartUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CurrenciesListUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HistoryUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SearchUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PL_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Resource Include="Resources\Entypo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{dbe08919-6282-47a3-8577-05b67cd81765}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{420399c6-f954-45e0-82aa-89259e81eb85}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DP\DP.csproj">
+      <Project>{03156815-e5ca-4c76-82b5-bd784f59061b}</Project>
+      <Name>DP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Switch_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FlagsImages\abkhazia.png" />
+    <Resource Include="FlagsImages\AED.png" />
+    <Resource Include="FlagsImages\AFN.png" />
+    <Resource Include="FlagsImages\aland-islands.png" />
+    <Resource Include="FlagsImages\ALL.png" />
+    <Resource Include="FlagsImages\AMD.png" />
+    <Resource Include="FlagsImages\american-samoa.png" />
+    <Resource Include="FlagsImages\andorra.png" />
+    <Resource Include="FlagsImages\ANG.png" />
+    <Resource Include="FlagsImages\antigua-and-barbuda.png" />
+    <Resource Include="FlagsImages\AOA.png" />
+    <Resource Include="FlagsImages\ARS.png" />
+    <Resource Include="FlagsImages\AUD.png" />
+    <Resource Include="FlagsImages\austria.png" />
+    <Resource Include="FlagsImages\AWG.png" />
+    <Resource Include="FlagsImages\AZN.png" />
+    <Resource Include="FlagsImages\azores-islands.png" />
+    <Resource Include="FlagsImages\balearic-islands.png" />
+    <Resource Include="FlagsImages\BAM.png" />
+    <Resource Include="FlagsImages\basque-country.png" />
+    <Resource Include="FlagsImages\BBD.png" />
+    <Resource Include="FlagsImages\BDT.png" />
+    <Resource Include="FlagsImages\belgium.png" />
+    <Resource Include="FlagsImages\BGN.png" />
+    <Resource Include="FlagsImages\BHD.png" />
+    <Resource Include="FlagsImages\bhutan-1.png" />
+    <Resource Include="FlagsImages\BIF.png" />
+    <Resource Include="FlagsImages\BMD.png" />
+    <Resource Include="FlagsImages\BND.png" />
+    <Resource Include="FlagsImages\BOB.png" />
+    <Resource Include="FlagsImages\bonaire.png" />
+    <Resource Include="FlagsImages\british-columbia.png" />
+    <Resource Include="FlagsImages\british-indian-ocean-territory.png" />
+    <Resource Include="FlagsImages\british-virgin-islands.png" />
+    <Resource Include="FlagsImages\BRL.png" />
+    <Resource Include="FlagsImages\BSD.png" />
+    <Resource Include="FlagsImages\BTN.png" />
+    <Resource Include="FlagsImages\burkina-faso.png" />
+    <Resource Include="FlagsImages\BWP.png" />
+    <Resource Include="FlagsImages\BYR.png" />
+    <Resource Include="FlagsImages\BZD.png" />
+    <Resource Include="FlagsImages\CAD.png" />
+    <Resource Include="FlagsImages\canary-islands.png" />
+    <Resource Include="FlagsImages\central-african-republic.png" />
+    <Resource Include="FlagsImages\ceuta.png" />
+    <Resource Include="FlagsImages\chad.png" />
+    <Resource Include="FlagsImages\CHF.png" />
+    <Resource Include="FlagsImages\christmas-island.png" />
+    <Resource Include="FlagsImages\CLF.png" />
+    <Resource Include="FlagsImages\CLP.png" />
+    <Resource Include="FlagsImages\CNY.png" />
+    <Resource Include="FlagsImages\cocos-island.png" />
+    <Resource Include="FlagsImages\cook-islands.png" />
+    <Resource Include="FlagsImages\COP.png" />
+    <Resource Include="FlagsImages\corsica.png" />
+    <Resource Include="FlagsImages\CRC.png" />
+    <Resource Include="FlagsImages\CUC.png" />
+    <Resource Include="FlagsImages\curacao.png" />
+    <Resource Include="FlagsImages\CVE.png" />
+    <Resource Include="FlagsImages\cyprus.png" />
+    <Resource Include="FlagsImages\CZK.png" />
+    <Resource Include="FlagsImages\democratic-republic-of-congo.png" />
+    <Resource Include="FlagsImages\DJF.png" />
+    <Resource Include="FlagsImages\DKK.png" />
+    <Resource Include="FlagsImages\dominica.png" />
+    <Resource Include="FlagsImages\DOP.png" />
+    <Resource Include="FlagsImages\DZD.png" />
+    <Resource Include="FlagsImages\east-timor.png" />
+    <Resource Include="FlagsImages\ecuador.png" />
+    <Resource Include="FlagsImages\EGP.png" />
+    <Resource Include="FlagsImages\england.png" />
+    <Resource Include="FlagsImages\equatorial-guinea.png" />
+    <Resource Include="FlagsImages\ERN.png" />
+    <Resource Include="FlagsImages\estonia.png" />
+    <Resource Include="FlagsImages\ETB.png" />
+    <Resource Include="FlagsImages\EUR.png" />
+    <Resource Include="FlagsImages\faroe-islands.png" />
+    <Resource Include="FlagsImages\finland.png" />
+    <Resource Include="FlagsImages\FJD.png" />
+    <Resource Include="FlagsImages\FKP.png" />
+    <Resource Include="FlagsImages\france.png" />
+    <Resource Include="FlagsImages\french-polynesia.png" />
+    <Resource Include="FlagsImages\gabon.png" />
+    <Resource Include="FlagsImages\galapagos-islands.png" />
+    <Resource Include="FlagsImages\GBP.png" />
+    <Resource Include="FlagsImages\GEL.png" />
+    <Resource Include="FlagsImages\germany.png" />
+    <Resource Include="FlagsImages\ghana.png" />
+    <Resource Include="FlagsImages\GHS.png" />
+    <Resource Include="FlagsImages\GIP.png" />
+    <Resource Include="FlagsImages\GMD.png" />
+    <Resource Include="FlagsImages\GNF.png" />
+    <Resource Include="FlagsImages\greece.png" />
+    <Resource Include="FlagsImages\greenland.png" />
+    <Resource Include="FlagsImages\grenada.png" />
+    <Resource Include="FlagsImages\GTQ.png" />
+    <Resource Include="FlagsImages\guam.png" />
+    <Resource Include="FlagsImages\guernsey.png" />
+    <Resource Include="FlagsImages\GYD.png" />
+    <Resource Include="FlagsImages\hawaii.png" />
+    <Resource Include="FlagsImages\HKD.png" />
+    <Resource Include="FlagsImages\HNL.png" />
+    <Resource Include="FlagsImages\HRK.png" />
+    <Resource Include="FlagsImages\HTG.png" />
+    <Resource Include="FlagsImages\HUF.png" />
+    <Resource Include="FlagsImages\IDR.png" />
+    <Resource Include="FlagsImages\ILS.png" />
+    <Resource Include="FlagsImages\INR.png" />
+    <Resource Include="FlagsImages\IQD.png" />
+    <Resource Include="FlagsImages\ireland.png" />
+    <Resource Include="FlagsImages\IRR.png" />
+    <Resource Include="FlagsImages\ISK.png" />
+    <Resource Include="FlagsImages\isle-of-man.png" />
+    <Resource Include="FlagsImages\italy.png" />
+    <Resource Include="FlagsImages\ivory-coast.png" />
+    <Resource Include="FlagsImages\jersey.png" />
+    <Resource Include="FlagsImages\JMD.png" />
+    <Resource Include="FlagsImages\JOD.png" />
+    <Resource Include="FlagsImages\JPY.png" />
+    <Resource Include="FlagsImages\KES.png" />
+    <Resource Include="FlagsImages\KGS.png" />
+    <Resource Include="FlagsImages\KHR.png" />
+    <Resource Include="FlagsImages\kiribati.png" />
+    <Resource Include="FlagsImages\KMF.png" />
+    <Resource Include="FlagsImages\kosovo.png" />
+    <Resource Include="FlagsImages\KPW.png" />
+    <Resource Include="FlagsImages\KRW.png" />
+    <Resource Include="FlagsImages\KWD.png" />
+    <Resource Include="FlagsImages\KYD.png" />
+    <Resource Include="FlagsImages\KZT.png" />
+    <Resource Include="FlagsImages\laos.png" />
+    <Resource Include="FlagsImages\latvia.png" />
+    <Resource Include="FlagsImages\LBP.png" />
+    <Resource Include="FlagsImages\liechtenstein.png" />
+    <Resource Include="FlagsImages\lithuania.png" />
+    <Resource Include="FlagsImages\LKR.png" />
+    <Resource Include="FlagsImages\LRD.png" />
+    <Resource Include="FlagsImages\LSL.png" />
+    <Resource Include="FlagsImages\luxembourg.png" />
+    <Resource Include="FlagsImages\LYD.png" />
+    <Resource Include="FlagsImages\MAD.png" />
+    <Resource Include="FlagsImages\madeira.png" />
+    <Resource Include="FlagsImages\mali.png" />
+    <Resource Include="FlagsImages\malta.png" />
+    <Resource Include="FlagsImages\marshall-island.png" />
+    <Resource Include="FlagsImages\martinique.png" />
+    <Resource Include="FlagsImages\MDL.png" />
+    <Resource Include="FlagsImages\melilla.png" />
+    <Resource Include="FlagsImages\MGA.png" />
+    <Resource Include="FlagsImages\micronesia.png" />
+    <Resource Include="FlagsImages\MKD.png" />
+    <Resource Include="FlagsImages\MMK.png" />
+    <Resource Include="FlagsImages\MNT.png" />
+    <Resource Include="FlagsImages\monaco.png" />
+    <Resource Include="FlagsImages\montenegro.png" />
+    <Resource Include="FlagsImages\montserrat.png" />
+    <Resource Include="FlagsImages\MOP.png" />
+    <Resource Include="FlagsImages\morocco.png" />
+    <Resource Include="FlagsImages\MRO.png" />
+    <Resource Include="FlagsImages\MUR.png" />
+    <Resource Include="FlagsImages\MVR.png" />
+    <Resource Include="FlagsImages\MWK.png" />
+    <Resource Include="FlagsImages\MXN.png" />
+    <Resource Include="FlagsImages\MXV.png" />
+    <Resource Include="FlagsImages\MYR.png" />
+    <Resource Include="FlagsImages\MZN.png" />
+    <Resource Include="FlagsImages\NAD.png" />
+    <Resource Include="FlagsImages\nato.png" />
+    <Resource Include="FlagsImages\nauru.png" />
+    <Resource Include="FlagsImages\new-zealand.png" />
+    <Resource Include="FlagsImages\NGN.png" />
+    <Resource Include="FlagsImages\niger.png" />
+    <Resource Include="FlagsImages\NIO.png" />
+    <Resource Include="FlagsImages\niue.png" />
+    <Resource Include="FlagsImages\NOK.png" />
+    <Resource Include="FlagsImages\norfolk-island.png" />
+    <Resource Include="FlagsImages\northen-cyprus.png" />
+    <Resource Include="FlagsImages\northern-marianas-islands.png" />
+    <Resource Include="FlagsImages\NPR.png" />
+    <Resource Include="FlagsImages\NZD.png" />
+    <Resource Include="FlagsImages\OMR.png" />
+    <Resource Include="FlagsImages\orkney-islands.png" />
+    <Resource Include="FlagsImages\ossetia.png" />
+    <Resource Include="FlagsImages\PAB.png" />
+    <Resource Include="FlagsImages\palau.png" />
+    <Resource Include="FlagsImages\palestine.png" />
+    <Resource Include="FlagsImages\PEN.png" />
+    <Resource Include="FlagsImages\PGK.png" />
+    <Resource Include="FlagsImages\PHP.png" />
+    <Resource Include="FlagsImages\pitcairn-islands.png" />
+    <Resource Include="FlagsImages\PKR.png" />
+    <Resource Include="FlagsImages\PLN.png" />
+    <Resource Include="FlagsImages\portugal.png" />
+    <Resource Include="FlagsImages\puerto-rico.png" />
+    <Resource Include="FlagsImages\PYG.png" />
+    <Resource Include="FlagsImages\QAR.png" />
+    <Resource Include="FlagsImages\rapa-nui.png" />
+    <Resource Include="FlagsImages\republic-of-the-congo.png" />
+    <Resource Include="FlagsImages\RON.png" />
+    <Resource Include="FlagsImages\RSD.png" />
+    <Resource Include="FlagsImages\RUB.png" />
+    <Resource Include="FlagsImages\RWF.png" />
+    <Resource Include="FlagsImages\saba-island.png" />
+    <Resource Include="FlagsImages\saint-kitts-and-nevis.png" />
+    <Resource Include="FlagsImages\san-marino.png" />
+    <Resource Include="FlagsImages\SAR.png" />
+    <Resource Include="FlagsImages\sardinia.png" />
+    <Resource Include="FlagsImages\SBD.png" />
+    <Resource Include="FlagsImages\scotland.png" />
+    <Resource Include="FlagsImages\SCR.png" />
+    <Resource Include="FlagsImages\SDG.png" />
+    <Resource Include="FlagsImages\SEK.png" />
+    <Resource Include="FlagsImages\senegal.png" />
+    <Resource Include="FlagsImages\SGD.png" />
+    <Resource Include="FlagsImages\sint-eustatius.png" />
+    <Resource Include="FlagsImages\sint-maarten.png" />
+    <Resource Include="FlagsImages\SLL.png" />
+    <Resource Include="FlagsImages\slovakia.png" />
+    <Resource Include="FlagsImages\slovenia.png" />
+    <Resource Include="FlagsImages\somaliland.png" />
+    <Resource Include="FlagsImages\SOS.png" />
+    <Resource Include="FlagsImages\south-africa.png" />
+    <Resource Include="FlagsImages\spain.png" />
+    <Resource Include="FlagsImages\SRD.png" />
+    <Resource Include="FlagsImages\SSP.png" />
+    <Resource Include="FlagsImages\st-barts.png" />
+    <Resource Include="FlagsImages\st-lucia.png" />
+    <Resource Include="FlagsImages\st-vincent-and-the-grenadines.png" />
+    <Resource Include="FlagsImages\STD.png" />
+    <Resource Include="FlagsImages\SVC.png" />
+    <Resource Include="FlagsImages\SYP.png" />
+    <Resource Include="FlagsImages\SZL.png" />
+    <Resource Include="FlagsImages\THB.png" />
+    <Resource Include="FlagsImages\tibet.png" />
+    <Resource Include="FlagsImages\TJS.png" />
+    <Resource Include="FlagsImages\TMT.png" />
+    <Resource Include="FlagsImages\TND.png" />
+    <Resource Include="FlagsImages\togo.png" />
+    <Resource Include="FlagsImages\TOP.png" />
+    <Resource Include="FlagsImages\transnistria.png" />
+    <Resource Include="FlagsImages\TRY.png" />
+    <Resource Include="FlagsImages\TTD.png" />
+    <Resource Include="FlagsImages\turks-and-caicos.png" />
+    <Resource Include="FlagsImages\tuvalu.png" />
+    <Resource Include="FlagsImages\TWD.png" />
+    <Resource Include="FlagsImages\TZS.png" />
+    <Resource Include="FlagsImages\UAH.png" />
+    <Resource Include="FlagsImages\UGX.png" />
+    <Resource Include="FlagsImages\united-nations.png" />
+    <Resource Include="FlagsImages\USD.png" />
+    <Resource Include="FlagsImages\UYU.png" />
+    <Resource Include="FlagsImages\UZS.png" />
+    <Resource Include="FlagsImages\vatican-city.png" />
+    <Resource Include="FlagsImages\VEF.png" />
+    <Resource Include="FlagsImages\VND.png" />
+    <Resource Include="FlagsImages\VUV.png" />
+    <Resource Include="FlagsImages\wales.png" />
+    <Resource Include="FlagsImages\WST.png" />
+    <Resource Include="FlagsImages\XAF.png" />
+    <Resource Include="FlagsImages\XCD.png" />
+    <Resource Include="FlagsImages\XOF.png" />
+    <Resource Include="FlagsImages\XPF.png" />
+    <Resource Include="FlagsImages\YER.png" />
+    <Resource Include="FlagsImages\ZAR.png" />
+    <Resource Include="FlagsImages\ZMW.png" />
+    <Resource Include="FlagsImages\ZWL.png" />
+    <Resource Include="FlagsImages\‏‏CUP.png" />
+    <Resource Include="FlagsImages\‏‏ZMK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\Windows\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="FlagsImages\BTC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\appIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="appIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\printIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\saveIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

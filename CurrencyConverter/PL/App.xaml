@@ -1,0 +1,42 @@
+﻿<Application x:Class="PL.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PL"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+      
+            <ResourceDictionary>
+                <ResourceDictionary.MergedDictionaries>
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                    <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                </ResourceDictionary.MergedDictionaries>
+            </ResourceDictionary>
+
+        <!--<Style TargetType="ComboBox" 
+                          ItemsSource="{Binding countries.Result, IsAsync=True}" 
+                          HorizontalAlignment="Left" 
+                          Margin="10,5,0,0" 
+                          VerticalAlignment="Top"
+                          ItemTemplate="{StaticResource CurrencyComboBoxItem}"
+                          SelectedItem="{Binding raltiveCountry}" 
+                          Cursor="Hand" 
+                          
+                          
+                          Custom:TextBoxHelper.UseFloatingWatermark="True" 
+                          Background="{StaticResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+            <ComboBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    --><!--<StackPanel/>
+                    If StackPanel was used, the memory consumed was over 2GB and dead slow.
+                    --><!--
+                    <VirtualizingStackPanel>
+                        --><!--Memory footprint is only 200 mb--><!--
+                    </VirtualizingStackPanel>
+                </ItemsPanelTemplate>
+            </ComboBox.ItemsPanel>
+        </Style>-->
+    </Application.Resources>
+</Application>
